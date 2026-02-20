@@ -3,3 +3,4 @@ node_modules
 flyway-local.conf
 flyway-prod.conf
 flyway.conf
+build

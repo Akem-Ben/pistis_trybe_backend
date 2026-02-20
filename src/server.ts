@@ -15,7 +15,6 @@ initSocket(server);
 
 const PORT = configurations.PORT || 8080;
 
-
 (async () => {
   try {
     await connectToDatabase();
