@@ -34,14 +34,11 @@ export const generalAuthFunction = async (
 
     if (shouldSkipAuth) return next();
 
-    // If path is not registered at all, skip auth and let the router return 404
     const isKnownPath = REGISTERED_PATHS.some((path) =>
       currentPath.startsWith(path),
     );
 
     if (!isKnownPath) return next();
-
-    // --- rest of auth logic unchanged below ---
 
     const authorizationHeader = request.headers.authorization;
 
